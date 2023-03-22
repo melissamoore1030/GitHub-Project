@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dosis:wght@200;300;400;500;600;700;800&family=Lobster&display=swap" rel="stylesheet">  
+<link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body background="images/background.jpg">
+    <div class="container">
+      <div class="card" style="width: 45rem">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-2">New York</div>
+            <div class="col-2">Houston</div>
+            <div class="col-2">Paris</div>
+            <div class="col-2">Tokyo</div>
+            <div id = "location-temp" class="col-2">
+              <button class = "location-temp">
+                Current Location Temperature
+              </button>
+            </div>
+          </div>
+          <br />
+          <form  id="city-form"  class="city">
+             <div class="row">
+             <div class="col">
+            <input
+              type="text"
+              class="col form-control"
+              id="city-input"
+              placeholder="Search for a city"
+            />
+          </div>
+            <div class="col">
+            <input type="submit" class="submit" id="submit" value="Go" />
+          </div>
+        </div>
+          </form>
+          <br />
+            <div class="current-city">
+            <div id="city-now" class="col-12" ><strong>Albany</strong></div>
+            <div id="date-time" class="col-12">Friday 5:00 PM</div>
+            <div class="col-12">Sunny</div>
+          </div>
+          <p>
+          <p>
+          <h1 id="current-temp" class="current-temp">
+            <strong>10°</strong> C
+          </h1>
+          </p>
+            <h6 class="quote">
+              <strong>“Keep your face to the sun and you will never see the shadows.”</strong>
+              <br />
+            <i>― Helen Keller</i>
+            </h6>
+          </p>
+            <div class="row">
+              <div class="col-2">
+              Saturday
+              <br/ >
+              <img src="images/sun.png" width="65px"/>
+              <br />
+              55°
+              </div>
+            <div class="col-2">
+              Sunday
+              <br />
+              <img src="images/sun.png" width="65px"/>
+              <br />
+              62°
+            </div>
+            <div class="col-2">
+              Monday <br />
+              <img src="images/rain.png" width="65px"/>
+              <br />
+              59°
+            </div>
+            <div class="col-2">
+              Tuesday <br />
+              <img src="images/cloud.png" width="65px"/>
+              <br />
+              63°
+            </div>
+            <div class="col-2">
+              Wednesday <br />
+              <img src="images/sun.png" width="65px"/>
+              <br />
+              65°
+            </div>
+        </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

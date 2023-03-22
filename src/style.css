@@ -1,0 +1,51 @@
+body {
+  margin: 60px;
+  font-family: Dosis, "Courier New", Courier, monospace;
+}
+
+.row {
+  font-size: 20px;
+}
+
+.card {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.location-temp {
+  width: 200px;
+  margin-left: -5px;
+  background-color: #ffc2de;
+}
+
+.city {
+  width: 1050px;
+}
+
+.submit {
+  width: 100px;
+}
+
+.current-city {
+  text-align: center;
+  font-size: 18px;
+  float: right;
+  margin-top: 40px;
+}
+
+.current-temp {
+  margin: 30px 0 50px 0;
+  font-size: 55px;
+  font-family: Concert One, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+  color: #ff00c8;
+}
+
+.quote {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.col-2 {
+  text-align: center;
+}
