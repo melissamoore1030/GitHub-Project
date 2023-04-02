@@ -58,6 +58,10 @@ a {
   cursor: default;
 }
 
+.active {
+  color: #ff00c8;
+}
+
 .units {
   font-size: 30px;
   font-family: Concert One, Cambria, Cochin, Georgia, Times, "Times New Roman",

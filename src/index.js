@@ -53,6 +53,10 @@ function showTemperature(response) {
 function searchTemp(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
+function searchCity(city) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
@@ -121,4 +125,4 @@ celsiusLink.addEventListener("click", showCelsius);
 
 let celsiusTemperature = null;
 
-searchTemp("Albany");
+searchCity("Albany");
