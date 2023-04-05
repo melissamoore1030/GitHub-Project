@@ -34,6 +34,33 @@ function showCity(event) {
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", showCity);
 
+function displayForecast(response) {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col">
+              ${day}
+              <br />
+              <img src="images/sun.png" width="65px"/>
+              <br />
+              55° 45°
+              </div>
+              `;
+    forecast.innerHTML = forecastHTML + `</div>`;
+  });
+}
+
+function getForecast(coordinates) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#current-temp");
@@ -48,6 +75,7 @@ function showTemperature(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusTemperature = response.data.main.temp;
+  getForecast(response.data.coord);
 }
 
 function searchTemp(event) {
@@ -120,31 +148,9 @@ function showCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-function displayForecast() {
-  let forecast = document.querySelector("#forecast");
-
-  let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-              <div class="col">
-              ${day}
-              <br />
-              <img src="images/sun.png" width="65px"/>
-              <br />
-              55° 45°
-              </div>
-              `;
-    forecast.innerHTML = forecastHTML + `</div>`;
-  });
-}
-
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 let celsiusTemperature = null;
 
-displayForecast();
 searchCity("Albany");
