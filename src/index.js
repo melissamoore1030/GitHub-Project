@@ -120,9 +120,31 @@ function showCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col">
+              ${day}
+              <br />
+              <img src="images/sun.png" width="65px"/>
+              <br />
+              55° 45°
+              </div>
+              `;
+    forecast.innerHTML = forecastHTML + `</div>`;
+  });
+}
+
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 let celsiusTemperature = null;
 
+displayForecast();
 searchCity("Albany");

@@ -4,7 +4,8 @@ body {
 }
 
 .row {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 20px auto;
 }
 
 .card {
@@ -30,7 +31,7 @@ body {
   text-align: center;
   font-size: 18px;
   float: right;
-  margin-top: 40px;
+  margin-top: 0px auto;
   text-transform: capitalize;
 }
 
@@ -40,13 +41,14 @@ body {
 
 .icon {
   float: right;
-  margin-top: 20px;
+  margin-top: 0px auto;
   margin-right: 30px;
 }
 
 .current-temp {
   display: inline;
   margin: 30px 0 50px 0;
+  padding-left: 12px;
   font-size: 55px;
   font-family: Concert One, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
@@ -74,6 +76,9 @@ a {
   margin-bottom: 50px;
 }
 
-.col-2 {
+.forecast {
+  font-size: 20px;
+  margin: 0px auto;
+  width: 1000px;
   text-align: center;
 }
