@@ -22,7 +22,7 @@ let days = [
 ];
 let currentDay = days[now.getDay()];
 
-current.innerHTML = `${currentDay} ${hours}:${minutes}`;
+current.innerHTML = `<em>Last updated:</em> ${currentDay} ${hours}:${minutes}`;
 
 function showCity(event) {
   event.preventDefault();

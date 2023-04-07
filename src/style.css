@@ -3,35 +3,38 @@ body {
   font-family: Dosis, "Courier New", Courier, monospace;
 }
 
-.row {
-  font-size: 18px;
-  margin: 20px auto;
-}
-
 .card {
   margin: 0 auto;
   padding: 20px;
 }
 
-.location-temp {
-  width: 200px;
-  margin-left: -5px;
-  background-color: #ffc2de;
-}
-
 .city {
-  width: 1050px;
+  margin-left: 20px;
+  width: 1025px;
 }
 
 .submit {
+  margin-right: 3px;
   width: 100px;
+  height: 35px;
+  color: white;
+  background-color: #7a34eb;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.submit:hover {
+  opacity: 60%;
+  cursor: default;
 }
 
 .current-city {
-  text-align: center;
-  font-size: 18px;
   float: right;
-  margin-top: 0px auto;
+  text-align: right;
+  font-size: 18px;
+  margin-top: -125px;
+  padding-right: 10px;
   text-transform: capitalize;
 }
 
@@ -40,15 +43,33 @@ body {
 }
 
 .icon {
-  float: right;
-  margin-top: 0px auto;
-  margin-right: 30px;
+  float: left;
+  margin: -200 px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.location-temp {
+  font-size: 18px;
+  width: 230px;
+  text-align: center;
+  margin-left: 416px;
+  margin-bottom: 20px;
+  background-color: #ffc2de;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.location-temp:hover {
+  opacity: 70%;
+  cursor: default;
+  color: purple;
 }
 
 .current-temp {
   display: inline;
-  margin: 30px 0 50px 0;
-  padding-left: 12px;
+  padding-left: 5px;
   font-size: 55px;
   font-family: Concert One, Cambria, Cochin, Georgia, Times, "Times New Roman",
     serif;
@@ -60,10 +81,6 @@ a {
   cursor: default;
 }
 
-.active {
-  color: #ff00c8;
-}
-
 .units {
   font-size: 30px;
   font-family: Concert One, Cambria, Cochin, Georgia, Times, "Times New Roman",
@@ -71,14 +88,9 @@ a {
   color: #ff00c8;
 }
 
-.quote {
-  font-size: 20px;
-  margin-bottom: 50px;
-}
-
 .forecast {
   font-size: 20px;
-  margin: 0px auto;
+  margin-top: 10px;
   width: 1000px;
   text-align: center;
 }

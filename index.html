@@ -24,17 +24,11 @@
     <div class="container">
       <div class="card" style="width: 45rem">
         <div class="card-body">
-          <div class="row">
-            <div class="col-2">New York</div>
-            <div class="col-2">Houston</div>
-            <div class="col-2">Paris</div>
-            <div class="col-2">Tokyo</div>
-            <div id = "location-temp" class="col-2">
-              <button class = "location-temp">
+
+        <button id = "location-temp" class = "location-temp">
                 Current Location Temperature
-              </button>
-            </div>
-          </div>
+         </button>
+
           <br />
           <form  id="city-form"  class="city">
              <div class="row">
@@ -52,15 +46,10 @@
         </div>
           </form>
           <br />
-            <div class="current-city">
-            <div id="city-now" class="col-12" ><strong>Albany</strong></div>
-            <div class="col-12"><em>Last updated:</em></div>
-            <div id="date-time" class="col-12">Friday 5:00 PM</div>
-            <div id = "description" class="col-12">Sunny</div>
-            <div class="col-12">Wind: <span id = "wind">2</span> mph</div>
-          </div>
+
           <p>       
           <p>
+
           <span class="icon"><img src="https://openweathermap.org/img/wn/10d@2x.png" id="icon"/></span>
           <h1 id="current-temp" class="current-temp">
             <strong>10</strong> 
@@ -68,6 +57,14 @@
           <span class="units">°F</span> 
           </p>
           <br />
+          
+          <div class="current-city">
+            <div id="city-now" class="col" ><strong>Albany</strong></div>
+            <div id="date-time" class="col">Friday 5:00 PM</div>
+            <div id = "description" class="col">Sunny</div>
+            <div class="col">Wind: <span id = "wind">2</span> mph</div>
+          </div>
+
           <span id="forecast" class="forecast">
           </span>
 
